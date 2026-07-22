@@ -1,6 +1,6 @@
 from datasets import load_dataset
 from torch.utils.data import DataLoader
-from torchvisions import transforms
+from torchvision import transforms
 from config import BATCH_SIZE, IMG_SIZE, IMAGENET_MEAN, IMAGENET_STD, NUM_WORKERS
 
 
