@@ -18,7 +18,7 @@ from models.resnet50 import build_model
 
 
 def get_class_names():
-    builder = load_dataset_builder("AQUA20")
+    builder = load_dataset_builder("taufiktrf/AQUA20")
     return builder.info.features["label"].names
 
 

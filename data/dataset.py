@@ -34,7 +34,7 @@ def transform_images(examples, transform_fn):
 
 
 def get_dataloaders():
-    dataset = load_dataset("AQUA20")
+    dataset = load_dataset("taufiktrf/AQUA20")
     split = dataset["train"].train_test_split(test_size=0.2, seed=42)
     train_split = split["train"]
     val_split = split["test"]
