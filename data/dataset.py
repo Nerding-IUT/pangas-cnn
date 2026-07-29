@@ -1,5 +1,8 @@
+from collections import Counter
+
+import numpy as np
 from datasets import load_dataset
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, WeightedRandomSampler
 from torchvision import transforms
 from config import BATCH_SIZE, IMG_SIZE, IMAGENET_MEAN, IMAGENET_STD, NUM_WORKERS
 
@@ -33,12 +36,23 @@ def transform_images(examples, transform_fn):
     return examples
 
 
-def get_dataloaders():
+def get_dataloaders(use_weighted_sampler=True):
     dataset = load_dataset("taufiktrf/AQUA20")
     split = dataset["train"].train_test_split(test_size=0.2, seed=42)
     train_split = split["train"]
     val_split = split["test"]
     test_split = dataset["test"]
+
+    if use_weighted_sampler:
+        train_labels = train_split["label"]
+        class_counts = Counter(train_labels)
+        sample_weights = [1.0 / class_counts[l] for l in train_labels]
+        sampler = WeightedRandomSampler(sample_weights, len(sample_weights), replacement=True)
+        shuffle = False
+    else:
+        sampler = None
+        shuffle = True
+
     train_split.set_transform(
         lambda examples: transform_images(examples, get_transform(train=True))
     )
@@ -49,7 +63,7 @@ def get_dataloaders():
         lambda examples: transform_images(examples, get_transform(train=False))
     )
     train_loader = DataLoader(
-        train_split, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS
+        train_split, batch_size=BATCH_SIZE, sampler=sampler, shuffle=shuffle, num_workers=NUM_WORKERS
     )
     val_loader = DataLoader(
         val_split, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS

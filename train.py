@@ -9,9 +9,10 @@ from config import (
     LR_HEAD,
     LR_BACKBONE,
     CHECKPOINT_PATH,
+    MODEL_NAME,
 )
 from data.dataset import get_dataloaders
-from models.resnet50 import build_model, freeze_backbone, unfreeze_all
+from models import MODEL_REGISTRY
 
 
 def train_one_epoch(model, loader, optimizer, criterion, desc):
@@ -57,13 +58,17 @@ def validate(model, loader, criterion):
 
 
 def main():
+    model_cfg = MODEL_REGISTRY[MODEL_NAME]
+    classifier_attr = model_cfg["classifier_attr"]
+
     train_loader, val_loader, test_loader = get_dataloaders()
-    model = build_model().to(DEVICE)
+    model = model_cfg["build"]().to(DEVICE)
     criterion = nn.CrossEntropyLoss()
     best_acc = 0.0
     # === Stage 1: Train head only ===
-    freeze_backbone(model)
-    optimizer = torch.optim.Adam(model.fc.parameters(), lr=LR_HEAD)
+    model_cfg["freeze"](model)
+    classifier = getattr(model, classifier_attr)
+    optimizer = torch.optim.Adam(classifier.parameters(), lr=LR_HEAD)
     scheduler = ReduceLROnPlateau(optimizer, mode="max", patience=3, factor=0.1)
     for epoch in range(1, EPOCHS_STAGE1 + 1):
         train_loss, train_acc = train_one_epoch(
@@ -81,14 +86,15 @@ def main():
             torch.save(model.state_dict(), CHECKPOINT_PATH)
             print(f"  -> saved (best val acc: {best_acc:.4f})")
     # === Stage 2: Unfreeze & fine-tune ===
-    unfreeze_all(model)
+    model_cfg["unfreeze"](model)
+    classifier_params_id = {id(p) for p in classifier.parameters()}
+    backbone_params = [
+        p for p in model.parameters() if id(p) not in classifier_params_id
+    ]
     optimizer = torch.optim.Adam(
         [
-            {
-                "params": [p for n, p in model.named_parameters() if "fc" not in n],
-                "lr": LR_BACKBONE,
-            },
-            {"params": model.fc.parameters(), "lr": LR_HEAD},
+            {"params": backbone_params, "lr": LR_BACKBONE},
+            {"params": classifier.parameters(), "lr": LR_HEAD},
         ]
     )
     scheduler = ReduceLROnPlateau(optimizer, mode="max", patience=5, factor=0.1)

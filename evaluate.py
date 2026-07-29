@@ -1,3 +1,9 @@
+import multiprocessing as _mp
+try:
+    _mp.set_start_method("fork")
+except RuntimeError:
+    pass
+
 import torch
 import numpy as np
 import matplotlib
@@ -12,9 +18,9 @@ from sklearn.metrics import (
 )
 from datasets import load_dataset_builder
 
-from config import DEVICE, CHECKPOINT_PATH
+from config import DEVICE, CHECKPOINT_PATH, MODEL_NAME
 from data.dataset import get_dataloaders
-from models.resnet50 import build_model
+from models import MODEL_REGISTRY
 
 
 def get_class_names():
@@ -56,7 +62,7 @@ def main():
 
     _, _, test_loader = get_dataloaders()
 
-    model = build_model().to(DEVICE)
+    model = MODEL_REGISTRY[MODEL_NAME]["build"]().to(DEVICE)
     state = torch.load(CHECKPOINT_PATH, map_location=DEVICE, weights_only=True)
     model.load_state_dict(state)
 

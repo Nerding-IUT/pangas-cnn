@@ -4,6 +4,8 @@ import torchvision
 from torchvision.models import ResNet50_Weights
 from config import NUM_CLASSES, DEVICE
 
+CLASSIFIER_ATTR = "fc"
+
 
 def build_model(num_classes=NUM_CLASSES):
     model = torchvision.models.resnet50(weights=ResNet50_Weights.IMAGENET1K_V1)
