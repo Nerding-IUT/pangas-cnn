@@ -1,0 +1,6 @@
+# Pulled Kaggle artifacts — regenerate with `kaggle kernels output`, never commit.
+*/outputs/
+*.pth
+*.log
+*.png
+.ipynb_checkpoints/

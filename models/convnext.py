@@ -5,6 +5,11 @@ from torchvision.models import ConvNeXt_Tiny_Weights
 from config import NUM_CLASSES
 
 CLASSIFIER_ATTR = "classifier"
+GRADCAM_CHANNELS_LAST = False
+
+
+def get_gradcam_layer(model):
+    return model.features[-1]
 
 
 def build_model(num_classes=NUM_CLASSES):

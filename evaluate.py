@@ -1,9 +1,3 @@
-import multiprocessing as _mp
-try:
-    _mp.set_start_method("fork")
-except RuntimeError:
-    pass
-
 import torch
 import numpy as np
 import matplotlib
@@ -99,8 +93,8 @@ def main():
     plt.ylabel("True")
     plt.title("Confusion Matrix")
     plt.tight_layout()
-    plt.savefig("confusion_matrix.png", dpi=150)
-    print("Confusion matrix saved to confusion_matrix.png")
+    plt.savefig(f"confusion_matrix_{MODEL_NAME}.png", dpi=150)
+    print(f"Confusion matrix saved to confusion_matrix_{MODEL_NAME}.png")
 
 
 if __name__ == "__main__":

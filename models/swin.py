@@ -5,6 +5,15 @@ from torchvision.models import Swin_V2_B_Weights
 from config import NUM_CLASSES
 
 CLASSIFIER_ATTR = "head"
+# Swin stages emit (N, H, W, C), not (N, C, H, W).
+GRADCAM_CHANNELS_LAST = True
+
+
+def get_gradcam_layer(model):
+    # The only Conv2d in swin is the patch-embed stem, so an automatic
+    # "last conv" search would target the very first layer. Use the final
+    # stage output instead.
+    return model.features[-1]
 
 
 def build_model(num_classes=NUM_CLASSES):

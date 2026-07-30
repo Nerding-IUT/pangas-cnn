@@ -5,6 +5,11 @@ from torchvision.models import ResNet50_Weights
 from config import NUM_CLASSES, DEVICE
 
 CLASSIFIER_ATTR = "fc"
+GRADCAM_CHANNELS_LAST = False
+
+
+def get_gradcam_layer(model):
+    return model.layer4[-1]
 
 
 def build_model(num_classes=NUM_CLASSES):
