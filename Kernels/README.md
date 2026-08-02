@@ -44,6 +44,22 @@ Kaggle slugs cannot contain underscores, so the folder's `_` becomes `-` in the 
 | v2-full_resnet50 | resnet50 | on | 25 + 75 | `aqua20-v2-full-resnet50` | ✅ COMPLETE | **85.61%** | **0.7588** | ✅ 40 imgs |
 | v3-smoke_convnext_base | convnext_base | on | 1 + 1 | `aqua20-v3-smoke-convnext-base` | ✅ COMPLETE | 80.89% (smoke) | 0.7679 (smoke) | ✅ 40 imgs |
 | **v4-full_convnext_base** | convnext_base | on | 25 + 75 | `aqua20-v4-full-convnext-base` | ✅ COMPLETE | **90.63%** | **0.8748** | ✅ 40 imgs |
+| v5-manifest | — (CPU) | — | — | `aqua20-v5-manifest` | ✅ COMPLETE | — | — | frozen 39-image XAI manifest |
+| v6-smoke_xai_resnet50 | resnet50 | — | — | `aqua20-v6-smoke-xai-resnet50` | ✅ COMPLETE | — | — | GradCAM+LIME+SHAP harness proven |
+
+### The XAI track (directions #2 and #3)
+
+From v5 the registry carries a second kind of run. **Training kernels and explainability kernels are
+decoupled**: training produces a checkpoint, and a separate `xai.py` kernel mounts that checkpoint
+via `kernel_sources` and explains it. This exists because `notebook.ipynb` picks its Grad-CAM images
+from *that model's own errors*, so no two models were ever explained on the same pictures — which
+makes a cross-model comparison meaningless.
+
+`v5-manifest` fixes that by choosing 39 test images **once**, model-agnostically, and freezing them.
+Every XAI kernel explains that same set. Plan and phasing: `../../XAI_EXECUTION_PLAN.md`.
+
+⚠️ **`kernel_sources` does not mount at `/kaggle/input/<slug>/`.** It mounts at
+`/kaggle/input/notebooks/<username>/<slug>/`. Glob recursively; do not hard-code either path.
 
 **v4 is the best run and reproduces the paper.** AQUA20 reports 90.69% for ConvNeXt; v4 gets
 90.63%. Against v2's ResNet50 it is +5.02 pp top-1 and +0.116 macro-F1, with 151 errors instead of
@@ -112,9 +128,24 @@ cd "Kernels/v2-full_resnet50"
 timeout 120 kaggle kernels push -p . > /tmp/push.txt 2>&1 ; grep -v outdated /tmp/push.txt
 ```
 
-Then poll with `kaggle kernels status farhantahsinkhan/<slug>` and pull results with
-`kaggle kernels output farhantahsinkhan/<slug> -p <dir>`. Full procedure, including the
+Then poll with `kaggle kernels status farhantahsinkhan/<slug>`. Full procedure, including the
 background-poller loop and the JSON log decoder, is in `../../KAGGLE_RUN_GUIDE.md`.
+
+### ⚠️ Pull results INTO the run folder — never into a temp directory
+
+```bash
+kaggle kernels output farhantahsinkhan/<slug> -p "Kernels/v<N>-<purpose>_<model>/outputs"
+```
+
+Pulling to a scratch/temp path has already nearly lost a set of figures once: `%TEMP%` gets cleared
+routinely, and Kaggle output is the *only* copy of anything a kernel produced. `outputs/` inside the
+run folder keeps each artifact next to the run that made it, and `.gitignore` already excludes it so
+nothing is committed to the repo.
+
+**Report-bound figures get promoted out.** `Kernels/.gitignore` hides `*/outputs/` and every `*.png`
+under `Kernels/`, which is right for 340 MB checkpoints and wrong for a figure going into the
+report. Copy those to `../../report_assets/` with a self-describing name — that folder is outside
+any git repo and is treated as permanent. See `report_assets/README.md`.
 
 After a run reaches a terminal state, record the outcome in that run's `RUN.md` **and** in the
 run-log table above.

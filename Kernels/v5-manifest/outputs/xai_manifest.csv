@@ -1,0 +1,40 @@
+test_index,class,class_idx,stratum,why_selected,v2_pred,v4_pred,v2_correct,v4_correct,v2_conf,v4_conf,luminance,rms_contrast,saturation
+3,coral,0,paper_pair,paper pair: coral -> seaAnemone (v4 conf 0.999),seaAnemone,seaAnemone,False,False,0.9994,0.9981,0.3446,0.2075,0.6741
+319,coral,0,class_coverage,"cleanest coral (both models correct, mean conf 1.000)",coral,coral,True,True,1.0,0.9999,0.2777,0.0771,0.6345
+341,coral,0,paper_pair,paper pair: coral -> starfish (v4 conf 1.000),starfish,starfish,False,False,0.9957,0.9996,0.3972,0.2085,0.5056
+350,crab,1,rare_class,"rare class crab: v2 wrong, v4 right (capacity rescue)",turtle,crab,False,True,0.7813,0.9866,0.2498,0.142,0.4522
+354,crab,1,class_coverage,"cleanest crab (both models correct, mean conf 1.000)",crab,crab,True,True,1.0,1.0,0.5472,0.1532,0.5265
+360,diver,2,class_coverage,"cleanest diver (both models correct, mean conf 1.000)",diver,diver,True,True,1.0,1.0,0.4187,0.1314,0.9252
+386,eel,3,class_coverage,"cleanest eel (both models correct, mean conf 1.000)",eel,eel,True,True,1.0,0.9999,0.4032,0.164,0.5196
+581,fish,4,fish_group,v4 dominant error: fish -> fishInGroups (conf 0.989),fishInGroups,fishInGroups,False,False,0.9299,0.9886,0.3503,0.1591,0.6295
+593,fish,4,fish_group,v4 dominant error: fish -> fishInGroups (conf 0.994),fishInGroups,fishInGroups,False,False,0.9972,0.9936,0.3115,0.1681,0.7633
+713,fish,4,class_coverage,"cleanest fish (both models correct, mean conf 1.000)",fish,fish,True,True,1.0,1.0,0.5015,0.2093,0.3734
+718,fish,4,fish_group,v4 dominant error: fish -> fishInGroups (conf 1.000),fishInGroups,fishInGroups,False,False,0.9886,0.9997,0.4075,0.1802,0.6751
+725,fish,4,challenging,low light/contrast/saturation (difficulty pct 0.923),fish,fish,True,True,1.0,0.9994,0.2383,0.118,0.3841
+784,fish,4,challenging,low light/contrast/saturation (difficulty pct 0.958),fish,fish,True,True,0.9998,0.9945,0.2041,0.0973,0.381
+944,fish,4,paper_pair,paper pair: fish -> eel (v4 conf 1.000),eel,eel,False,False,1.0,1.0,0.4831,0.1044,0.5662
+1008,fishInGroups,5,class_coverage,"cleanest fishInGroups (both models correct, mean conf 1.000)",fishInGroups,fishInGroups,True,True,1.0,1.0,0.4447,0.2094,0.5844
+1025,flatworm,6,class_coverage,"cleanest flatworm (both models correct, mean conf 0.998)",flatworm,flatworm,True,True,0.9963,0.9988,0.5163,0.1588,0.6324
+1031,flatworm,6,paper_pair,paper pair: flatworm -> seaSlug (v2 conf 1.000),seaSlug,flatworm,False,True,1.0,0.7381,0.3757,0.2052,0.4987
+1037,jellyfish,7,class_coverage,"cleanest jellyfish (both models correct, mean conf 1.000)",jellyfish,jellyfish,True,True,1.0,1.0,0.3169,0.0749,0.7678
+1039,jellyfish,7,challenging,low light/contrast/saturation (difficulty pct 0.915),jellyfish,jellyfish,True,True,1.0,1.0,0.2896,0.0784,0.4224
+1067,marine_dolphin,8,paper_pair,paper pair: marine_dolphin -> shark (v2 conf 0.997),shark,marine_dolphin,False,True,0.9972,0.9865,0.4286,0.2007,0.7101
+1069,marine_dolphin,8,class_coverage,"cleanest marine_dolphin (both models correct, mean conf 0.928)",marine_dolphin,marine_dolphin,True,True,0.8655,0.9914,0.3814,0.0628,0.9941
+1070,marine_dolphin,8,rare_class,"rare class marine_dolphin: v2 wrong, v4 right (capacity rescue)",rayfish,marine_dolphin,False,True,0.9927,0.9986,0.4227,0.0729,0.4725
+1075,octopus,9,challenging,low light/contrast/saturation (difficulty pct 0.865),octopus,octopus,True,True,1.0,0.9999,0.3469,0.1099,0.3528
+1076,octopus,9,rare_class,"rare class octopus: v2 wrong, v4 right (capacity rescue)",fish,octopus,False,True,0.4088,0.8033,0.225,0.1986,0.3901
+1077,octopus,9,class_coverage,"cleanest octopus (both models correct, mean conf 1.000)",octopus,octopus,True,True,1.0,1.0,0.4974,0.1683,0.5501
+1157,rayfish,10,class_coverage,"cleanest rayfish (both models correct, mean conf 1.000)",rayfish,rayfish,True,True,1.0,1.0,0.5563,0.0936,0.9389
+1211,seaAnemone,11,class_coverage,"cleanest seaAnemone (both models correct, mean conf 1.000)",seaAnemone,seaAnemone,True,True,1.0,1.0,0.2826,0.1379,0.7563
+1377,seaAnemone,11,paper_pair,paper pair: seaAnemone -> coral (v4 conf 1.000),coral,coral,False,False,0.9999,0.8594,0.4795,0.1741,0.4489
+1399,seaCucumber,12,class_coverage,"cleanest seaCucumber (both models correct, mean conf 1.000)",seaCucumber,seaCucumber,True,True,1.0,1.0,0.5101,0.0952,0.5436
+1412,seaSlug,13,class_coverage,"cleanest seaSlug (both models correct, mean conf 1.000)",seaSlug,seaSlug,True,True,1.0,1.0,0.2871,0.1902,0.7776
+1425,seaSlug,13,paper_pair,paper pair: seaSlug -> flatworm (v4 conf 0.988),seaSlug,flatworm,True,False,0.9629,0.988,0.5821,0.3018,0.3929
+1451,seaUrchin,14,class_coverage,"cleanest seaUrchin (both models correct, mean conf 1.000)",seaUrchin,seaUrchin,True,True,1.0,1.0,0.5696,0.2908,0.3943
+1458,shark,15,class_coverage,"cleanest shark (both models correct, mean conf 1.000)",shark,shark,True,True,1.0,1.0,0.3922,0.0609,0.3497
+1468,shark,15,paper_pair,paper pair: shark -> marine_dolphin (v2 conf 0.996),marine_dolphin,shark,False,True,0.996,0.9998,0.3554,0.227,0.5955
+1478,shrimp,16,rare_class,"rare class shrimp: v2 wrong, v4 right (capacity rescue)",crab,shrimp,False,True,0.9993,0.993,0.3395,0.1538,0.6779
+1484,shrimp,16,class_coverage,"cleanest shrimp (both models correct, mean conf 1.000)",shrimp,shrimp,True,True,1.0,1.0,0.2517,0.1557,0.6385
+1489,squid,17,class_coverage,"cleanest squid (both models correct, mean conf 1.000)",squid,squid,True,True,1.0,1.0,0.4161,0.1688,0.181
+1515,starfish,18,class_coverage,"cleanest starfish (both models correct, mean conf 1.000)",starfish,starfish,True,True,1.0,1.0,0.4435,0.109,0.5939
+1565,turtle,19,class_coverage,"cleanest turtle (both models correct, mean conf 1.000)",turtle,turtle,True,True,1.0,1.0,0.4996,0.0991,0.6943

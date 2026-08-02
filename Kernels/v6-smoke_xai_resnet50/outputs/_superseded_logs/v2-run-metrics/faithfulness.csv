@@ -1,0 +1,13 @@
+test_index,model,method,deletion_auc,insertion_auc,concentration,correct
+3,resnet50,gradcam,0.09271,0.35664,0.21997,False
+3,resnet50,lime,0.15635,0.64552,0.36224,False
+3,resnet50,shap,0.35245,0.68329,0.55591,False
+3,resnet50,random,0.56915,0.60179,0.18954,False
+319,resnet50,gradcam,0.37392,0.6599,0.17633,True
+319,resnet50,lime,0.46843,0.89657,0.32469,True
+319,resnet50,shap,0.36798,0.76811,0.48945,True
+319,resnet50,random,0.62296,0.55751,0.1899,True
+341,resnet50,gradcam,0.50788,0.64967,0.21441,False
+341,resnet50,lime,0.23958,0.51604,0.19214,False
+341,resnet50,shap,0.48328,0.85763,0.54609,False
+341,resnet50,random,0.70398,0.88429,0.19037,False

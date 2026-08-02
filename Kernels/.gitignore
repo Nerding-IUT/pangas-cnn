@@ -1,6 +1,22 @@
-# Pulled Kaggle artifacts — regenerate with `kaggle kernels output`, never commit.
-*/outputs/
+# Pulled Kaggle artifacts — what is committed, and why.
+#
+# COMMITTED (Arian works from this repo, and these are the report's content):
+#   Grad-CAM / XAI figures, analysis CSV + JSON, kernel logs, probabilities.npy
+#
+# NOT COMMITTED — two exclusions, each for a concrete reason:
+#
+#   *.pth
+#     GitHub HARD-REJECTS any file over 100 MB. weights_convnext_base.pth is
+#     334 MB, so a push containing it does not degrade gracefully — it is
+#     refused outright. Tracking these needs Git LFS. Re-pull instead:
+#       kaggle kernels output farhantahsinkhan/<slug> -p Kernels/<run>/outputs
+#
+#   */outputs/saliency/
+#     Raw per-image saliency arrays (one .npy per image per method). Fully
+#     regenerable, and nothing reads them from git — v16-compare mounts the XAI
+#     kernel outputs directly on Kaggle via kernel_sources. Would reach ~156 MB
+#     by the end of Phase 3 in exchange for nothing.
 *.pth
-*.log
-*.png
+*/outputs/saliency/
+
 .ipynb_checkpoints/

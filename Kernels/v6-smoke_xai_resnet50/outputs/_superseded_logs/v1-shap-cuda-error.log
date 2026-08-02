@@ -1,0 +1,41 @@
+[{"stream_name":"stdout","time":20.423074197,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":20.423174382,"data":"XAI — resnet50   device=cuda   smoke=True\n"}
+,{"stream_name":"stdout","time":20.423179897,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":20.423182996,"data":"  mounted: notebooks/\n"}
+,{"stream_name":"stdout","time":20.455957082,"data":"  checkpoint: /kaggle/input/notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/weights_resnet50.pth\n"}
+,{"stream_name":"stdout","time":20.461749622,"data":"  manifest: /kaggle/input/notebooks/farhantahsinkhan/aqua20-v5-manifest/xai_manifest.csv\n"}
+,{"stream_name":"stdout","time":20.47450196,"data":"  explaining 3 images\n"}
+,{"stream_name":"stdout","time":20.474531354,"data":"\n"}
+,{"stream_name":"stderr","time":20.662095357,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":24.918169129,"data":"\rGenerating train split:   0%|          | 0/6559 [00:00\u003c?, ? examples/s]\rGenerating train split:  34%|███▎      | 2200/6559 [00:00\u003c00:00, 13357.69 examples/s]\rGenerating train split:  67%|██████▋   | 4400/6559 [00:00\u003c00:00, 13349.20 examples/s]\rGenerating train split:  91%|█████████▏| 6000/6559 [00:00\u003c00:00, 12308.03 examples/s]\rGenerating train split: 100%|██████████| 6559/6559 [00:00\u003c00:00, 12684.77 examples/s]\n"}
+,{"stream_name":"stderr","time":25.003167046,"data":"\rGenerating test split:   0%|          | 0/1612 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1612/1612 [00:00\u003c00:00, 19129.48 examples/s]\n"}
+,{"stream_name":"stdout","time":26.727691156,"data":"Loaded resnet50: 23,549,012 params\n"}
+,{"stream_name":"stdout","time":26.727750965,"data":"Grad-CAM target: Bottleneck (channels_last=False)\n"}
+,{"stream_name":"stdout","time":32.437356311,"data":"SHAP background: (50, 3, 224, 224)\n"}
+,{"stream_name":"stdout","time":32.437405627,"data":"\n"}
+,{"stream_name":"stdout","time":32.59472554,"data":"[1/3] #3 coral -\u003e seaAnemone (0.999)\n"}
+,{"stream_name":"stderr","time":32.914488243,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py:865: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:330.)\n"}
+,{"stream_name":"stderr","time":32.914519277,"data":"  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n"}
+,{"stream_name":"stderr","time":32.934870304,"data":"/kaggle/src/script.py:218: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)\n"}
+,{"stream_name":"stderr","time":32.934925134,"data":"  Image.fromarray(m.astype(np.float32), mode=\"F\").resize(\n"}
+,{"stream_name":"stderr","time":40.914196778,"data":"\r  0%|          | 0/1000 [00:00\u003c?, ?it/s]\r  1%|          | 10/1000 [00:00\u003c00:13, 73.52it/s]\r  3%|▎         | 30/1000 [00:00\u003c00:08, 110.91it/s]\r  5%|▌         | 50/1000 [00:00\u003c00:07, 125.00it/s]\r  7%|▋         | 70/1000 [00:00\u003c00:07, 131.96it/s]\r  9%|▉         | 90/1000 [00:00\u003c00:06, 136.92it/s]\r 11%|█         | 110/1000 [00:00\u003c00:06, 139.93it/s]\r 13%|█▎        | 130/1000 [00:00\u003c00:06, 143.15it/s]\r 15%|█▌        | 150/1000 [00:01\u003c00:05, 144.14it/s]\r 17%|█▋        | 170/1000 [00:01\u003c00:05, 144.23it/s]\r 19%|█▉        | 190/1000 [00:01\u003c00:05, 143.77it/s]\r 21%|██        | 210/1000 [00:01\u003c00:05, 143.31it/s]\r 23%|██▎       | 230/1000 [00:01\u003c00:05, 143.59it/s]\r 25%|██▌       | 250/1000 [00:01\u003c00:05, 143.70it/s]\r 27%|██▋       | 270/1000 [00:01\u003c00:05, 144.63it/s]\r 29%|██▉       | 290/1000 [00:02\u003c00:04, 143.94it/s]\r 31%|███       | 310/1000 [00:02\u003c00:04, 144.52it/s]\r 33%|███▎      | 330/1000 [00:02\u003c00:04, 145.34it/s]\r 35%|███▌      | 350/1000 [00:02\u003c00:04, 144.72it/s]\r 37%|███▋      | 370/1000 [00:02\u003c00:04, 145.74it/s]\r 39%|███▉      | 390/1000 [00:02\u003c00:04, 145.71it/s]\r 41%|████      | 410/1000 [00:02\u003c00:04, 145.17it/s]\r 43%|████▎     | 430/1000 [00:03\u003c00:03, 145.01it/s]\r 45%|████▌     | 450/1000 [00:03\u003c00:03, 144.81it/s]\r 47%|████▋     | 470/1000 [00:03\u003c00:03, 144.31it/s]\r 49%|████▉     | 490/1000 [00:03\u003c00:03, 143.91it/s]\r 51%|█████     | 510/1000 [00:03\u003c00:03, 143.74it/s]\r 53%|█████▎    | 530/1000 [00:03\u003c00:03, 143.23it/s]\r 55%|█████▌    | 550/1000 [00:03\u003c00:03, 142.74it/s]\r 57%|█████▋    | 570/1000 [00:04\u003c00:02, 143.34it/s]\r 59%|█████▉    | 590/1000 [00:04\u003c00:02, 143.26it/s]\r 61%|██████    | 610/1000 [00:04\u003c00:02, 143.25it/s]\r 63%|██████▎   | 630/1000 [00:04\u003c00:02, 143.30it/s]\r 65%|██████▌   | 650/1000 [00:04\u003c00:02, 144.61it/s]\r 67%|██████▋   | 670/1000 [00:04\u003c00:02, 144.76it/s]\r 69%|██████▉   | 690/1000 [00:04\u003c00:02, 145.06it/s]\r 71%|███████   | 710/1000 [00:04\u003c00:02, 144.27it/s]\r 73%|███████▎  | 730/1000 [00:05\u003c00:01, 144.47it/s]\r 75%|███████▌  | 750/1000 [00:05\u003c00:01, 143.32it/s]\r 77%|███████▋  | 770/1000 [00:05\u003c00:01, 143.73it/s]\r 79%|███████▉  | 790/1000 [00:05\u003c00:01, 142.37it/s]\r 81%|████████  | 810/1000 [00:05\u003c00:01, 142.80it/s]\r 83%|████████▎ | 830/1000 [00:05\u003c00:01, 143.76it/s]\r 85%|████████▌ | 850/1000 [00:05\u003c00:01, 144.84it/s]\r 87%|████████▋ | 870/1000 [00:06\u003c00:00, 145.54it/s]\r 89%|████████▉ | 890/1000 [00:06\u003c00:00, 144.76it/s]\r 91%|█████████ | 910/1000 [00:06\u003c00:00, 144.45it/s]\r 93%|█████████▎| 930/1000 [00:06\u003c00:00, 144.64it/s]\r 95%|█████████▌| 950/1000 [00:06\u003c00:00, 144.54it/s]\r 97%|█████████▋| 970/1000 [00:06\u003c00:00, 144.06it/s]\r 99%|█████████▉| 990/1000 [00:06\u003c00:00, 144.64it/s]\r100%|██████████| 1000/1000 [00:07\u003c00:00, 142.80it/s]\n"}
+,{"stream_name":"stderr","time":43.047946362,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":43.047983968,"data":"  File \"/kaggle/src/script.py\", line 506, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":43.048166396,"data":"    main()\n"}
+,{"stream_name":"stderr","time":43.048198932,"data":"  File \"/kaggle/src/script.py\", line 407, in main\n"}
+,{"stream_name":"stderr","time":43.048528501,"data":"    sv, explained = shap_saliency(shap_explainer, x, pred)\n"}
+,{"stream_name":"stderr","time":43.048622254,"data":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":43.048677018,"data":"  File \"/kaggle/src/script.py\", line 208, in shap_saliency\n"}
+,{"stream_name":"stderr","time":43.04895572,"data":"    explained = int(np.asarray(idx).ravel()[0])\n"}
+,{"stream_name":"stderr","time":43.04896732,"data":"                    ^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":43.049099858,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/_tensor.py\", line 1253, in __array__\n"}
+,{"stream_name":"stderr","time":43.051004013,"data":"    return self.numpy()\n"}
+,{"stream_name":"stderr","time":43.051020771,"data":"           ^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":43.05102543,"data":"TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.\n"}
+,{"stream_name":"stderr","time":48.666685696,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":48.666746584,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":48.93612686,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":48.936166837,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":49.687868033,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":50.634156711,"data":"[NbConvertApp] Writing 376802 bytes to __results__.html\n"}
+]

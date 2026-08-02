@@ -1,0 +1,19 @@
+{
+  "model": "resnet50",
+  "n_test": 1612,
+  "top1_accuracy": 0.8561,
+  "top3_accuracy": 0.9758,
+  "macro_precision": 0.781,
+  "macro_recall": 0.7667,
+  "macro_f1": 0.7588,
+  "weighted_f1": 0.8548,
+  "best_val_acc": 0.872,
+  "n_errors": 232,
+  "mean_confidence_correct": 0.9633,
+  "mean_confidence_wrong": 0.8277,
+  "errors_where_true_was_rank2": 139,
+  "errors_where_true_was_rank2_pct": 59.91,
+  "epochs_stage1": 25,
+  "epochs_stage2": 75,
+  "weighted_sampler": true
+}

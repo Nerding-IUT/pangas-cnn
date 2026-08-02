@@ -1,0 +1,25 @@
+{
+  "n_images": 39,
+  "n_test": 1612,
+  "classes_covered": 20,
+  "per_stratum": {
+    "class_coverage": 20,
+    "paper_pair": 8,
+    "rare_class": 4,
+    "challenging": 4,
+    "fish_group": 3
+  },
+  "n_v2_wrong": 14,
+  "n_v4_wrong": 8,
+  "sources": {
+    "v2": "aqua20-v2-full-resnet50",
+    "v4": "aqua20-v4-full-convnext-base"
+  },
+  "targets": {
+    "class_coverage": 20,
+    "paper_pair": 8,
+    "fish_group": 3,
+    "rare_class": 4,
+    "challenging": 4
+  }
+}

@@ -1,0 +1,13 @@
+test_index,model,method_a,method_b,spearman,iou_top10
+3,resnet50,gradcam,lime,0.16684,0.37527
+3,resnet50,gradcam,shap,0.06183,0.12552
+3,resnet50,lime,shap,0.01648,0.13263
+3,resnet50,gradcam,random,0.00216,0.05333
+319,resnet50,gradcam,lime,0.17641,0.12602
+319,resnet50,gradcam,shap,0.02966,0.07247
+319,resnet50,lime,shap,-0.00986,0.05057
+319,resnet50,gradcam,random,-0.00154,0.05134
+341,resnet50,gradcam,lime,0.03289,0.0
+341,resnet50,gradcam,shap,0.00395,0.05355
+341,resnet50,lime,shap,0.00909,0.07052
+341,resnet50,gradcam,random,0.0052,0.05521

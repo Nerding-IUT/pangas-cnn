@@ -1,0 +1,6 @@
+test_index,model,true,pred,correct,confidence,true_prob,true_rank,stratum
+3,resnet50,coral,seaAnemone,False,0.99941,0.0,5,paper_pair
+319,resnet50,coral,coral,True,1.0,1.0,1,class_coverage
+350,resnet50,crab,turtle,False,0.78131,0.21421,2,rare_class
+581,resnet50,fish,fishInGroups,False,0.92987,0.04289,2,fish_group
+725,resnet50,fish,fish,True,1.0,1.0,1,challenging

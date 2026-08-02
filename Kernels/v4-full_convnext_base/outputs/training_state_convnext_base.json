@@ -1,0 +1,1 @@
+{"selection_metric": "macro_f1", "best_metric": 0.88159485457973, "best_val_acc": 0.9176829268292683, "best_val_macro_f1": 0.88159485457973, "stage": 2, "epoch": 31, "seed": 42}

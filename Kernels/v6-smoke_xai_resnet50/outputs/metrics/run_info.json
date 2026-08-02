@@ -1,0 +1,11 @@
+{
+  "model": "resnet50",
+  "smoke": true,
+  "n_images": 5,
+  "checkpoint": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/weights_resnet50.pth",
+  "manifest": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v5-manifest/xai_manifest.csv",
+  "lime_samples": 1000,
+  "shap_nsamples": 200,
+  "runtime_min": 1.21,
+  "sanity_check_passed": true
+}

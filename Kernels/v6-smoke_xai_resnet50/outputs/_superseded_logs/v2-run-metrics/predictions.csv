@@ -1,0 +1,4 @@
+test_index,model,true,pred,correct,confidence,true_prob,true_rank,stratum
+3,resnet50,coral,seaAnemone,False,0.99941,0.0,5,paper_pair
+319,resnet50,coral,coral,True,1.0,1.0,1,class_coverage
+341,resnet50,coral,starfish,False,0.99574,0.00426,2,paper_pair

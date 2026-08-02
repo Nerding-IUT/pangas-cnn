@@ -1,0 +1,157 @@
+[{"stream_name":"stdout","time":6.891012238,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":6.891068992,"data":"MOUNTED INPUTS  (/kaggle/input)\n"}
+,{"stream_name":"stdout","time":6.891076679,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":6.891080561,"data":"  notebooks/\n"}
+,{"stream_name":"stdout","time":6.898836566,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/__huggingface_repos__.json\n"}
+,{"stream_name":"stdout","time":6.89887927,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/__notebook__.ipynb\n"}
+,{"stream_name":"stdout","time":6.89888558,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/__output__.json\n"}
+,{"stream_name":"stdout","time":6.898890446,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/__results__.html\n"}
+,{"stream_name":"stdout","time":6.898894901,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/confusion_matrix_resnet50.png\n"}
+,{"stream_name":"stdout","time":6.898899157,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/custom.css\n"}
+,{"stream_name":"stdout","time":6.899003921,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/training_state_resnet50.json\n"}
+,{"stream_name":"stdout","time":6.899038567,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/weights_resnet50.pth\n"}
+,{"stream_name":"stdout","time":6.904258516,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/analysis/confident_mistakes.csv\n"}
+,{"stream_name":"stdout","time":6.904300644,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/analysis/confusion_matrix.csv\n"}
+,{"stream_name":"stdout","time":6.904307008,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/analysis/confusion_pairs.csv\n"}
+,{"stream_name":"stdout","time":6.904312131,"data":"      notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/analysis/gradcam_manifest.csv\n"}
+,{"stream_name":"stdout","time":6.962298443,"data":"      ... 111 files total\n"}
+,{"stream_name":"stdout","time":6.962343796,"data":"\n"}
+,{"stream_name":"stdout","time":6.962350339,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":6.962355465,"data":"LOADING PREDICTIONS\n"}
+,{"stream_name":"stdout","time":6.962359984,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":6.991969383,"data":"  aqua20-v2-full-resnet50: /kaggle/input/notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/analysis/probabilities.npy\n"}
+,{"stream_name":"stdout","time":7.031403314,"data":"  aqua20-v4-full-convnext-base: /kaggle/input/notebooks/farhantahsinkhan/aqua20-v4-full-convnext-base/analysis/probabilities.npy\n"}
+,{"stream_name":"stderr","time":7.250140717,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":8.607505925,"data":"\n"}
+,{"stream_name":"stdout","time":8.607546344,"data":"Classes (20): ['coral', 'crab', 'diver', 'eel', 'fish', 'fishInGroups', 'flatworm', 'jellyfish', 'marine_dolphin', 'octopus', 'rayfish', 'seaAnemone', 'seaCucumber', 'seaSlug', 'seaUrchin', 'shark', 'shrimp', 'squid', 'starfish', 'turtle']\n"}
+,{"stream_name":"stderr","time":13.533515863,"data":"\rGenerating train split:   0%|          | 0/6559 [00:00\u003c?, ? examples/s]\rGenerating train split:  29%|██▉       | 1900/6559 [00:00\u003c00:00, 13996.24 examples/s]\rGenerating train split:  67%|██████▋   | 4400/6559 [00:00\u003c00:00, 12973.75 examples/s]\rGenerating train split:  91%|█████████▏| 6000/6559 [00:00\u003c00:00, 11455.18 examples/s]\rGenerating train split: 100%|██████████| 6559/6559 [00:00\u003c00:00, 12158.63 examples/s]\n"}
+,{"stream_name":"stderr","time":13.645752976,"data":"\rGenerating test split:   0%|          | 0/1612 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1612/1612 [00:00\u003c00:00, 14472.78 examples/s]\rGenerating test split: 100%|██████████| 1612/1612 [00:00\u003c00:00, 14428.18 examples/s]\n"}
+,{"stream_name":"stdout","time":13.6807697,"data":"Test images: 1612\n"}
+,{"stream_name":"stdout","time":13.684114152,"data":"  v2: top-1 85.61%  (232 errors)\n"}
+,{"stream_name":"stdout","time":13.684157471,"data":"  v4: top-1 90.63%  (151 errors)\n"}
+,{"stream_name":"stdout","time":13.684164967,"data":"\n"}
+,{"stream_name":"stdout","time":13.68419307,"data":"Computing image statistics (1612 thumbnails)...\n"}
+,{"stream_name":"stdout","time":19.645576877,"data":"  luminance   0.106 .. 0.755\n"}
+,{"stream_name":"stdout","time":19.645626027,"data":"  contrast    0.056 .. 0.331\n"}
+,{"stream_name":"stdout","time":19.645814568,"data":"  saturation  0.115 .. 0.994\n"}
+,{"stream_name":"stdout","time":19.645826345,"data":"\n"}
+,{"stream_name":"stdout","time":19.645832091,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.64583778,"data":"STRATUM A — class coverage\n"}
+,{"stream_name":"stdout","time":19.64584386,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.648075741,"data":"  selected 20\n"}
+,{"stream_name":"stdout","time":19.648101839,"data":"\n"}
+,{"stream_name":"stdout","time":19.648108842,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.648115297,"data":"STRATUM B — the paper's confusion pairs\n"}
+,{"stream_name":"stdout","time":19.648122438,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.648759268,"data":"  #944: fish -\u003e eel by v4 @ 1.000\n"}
+,{"stream_name":"stdout","time":19.648810345,"data":"  #1031: flatworm -\u003e seaSlug by v2 @ 1.000\n"}
+,{"stream_name":"stdout","time":19.648972414,"data":"  #1377: seaAnemone -\u003e coral by v4 @ 1.000\n"}
+,{"stream_name":"stdout","time":19.649047697,"data":"  #341: coral -\u003e starfish by v4 @ 1.000\n"}
+,{"stream_name":"stdout","time":19.649174294,"data":"  #3: coral -\u003e seaAnemone by v4 @ 0.999\n"}
+,{"stream_name":"stdout","time":19.649328154,"data":"  #1067: marine_dolphin -\u003e shark by v2 @ 0.997\n"}
+,{"stream_name":"stdout","time":19.64934814,"data":"  #1468: shark -\u003e marine_dolphin by v2 @ 0.996\n"}
+,{"stream_name":"stdout","time":19.649452222,"data":"  #1425: seaSlug -\u003e flatworm by v4 @ 0.988\n"}
+,{"stream_name":"stdout","time":19.649462758,"data":"\n"}
+,{"stream_name":"stdout","time":19.649468518,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.64949822,"data":"STRATUM C — fish \u003c-\u003e fishInGroups\n"}
+,{"stream_name":"stdout","time":19.649511032,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.654401095,"data":"  #718: fish -\u003e fishInGroups @ 1.000\n"}
+,{"stream_name":"stdout","time":19.654445308,"data":"  #593: fish -\u003e fishInGroups @ 0.994\n"}
+,{"stream_name":"stdout","time":19.654546525,"data":"  #581: fish -\u003e fishInGroups @ 0.989\n"}
+,{"stream_name":"stdout","time":19.654736218,"data":"\n"}
+,{"stream_name":"stdout","time":19.654745972,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.654750912,"data":"STRATUM D — rare classes\n"}
+,{"stream_name":"stdout","time":19.65475602,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.654788453,"data":"  #1076: octopus — v2 wrong, v4 right (capacity rescue)\n"}
+,{"stream_name":"stdout","time":19.654961311,"data":"  #1070: marine_dolphin — v2 wrong, v4 right (capacity rescue)\n"}
+,{"stream_name":"stdout","time":19.655171528,"data":"  #350: crab — v2 wrong, v4 right (capacity rescue)\n"}
+,{"stream_name":"stdout","time":19.65524023,"data":"  #1478: shrimp — v2 wrong, v4 right (capacity rescue)\n"}
+,{"stream_name":"stdout","time":19.655248717,"data":"\n"}
+,{"stream_name":"stdout","time":19.65525349,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.655299598,"data":"STRATUM E — challenging conditions\n"}
+,{"stream_name":"stdout","time":19.65530467,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.657144032,"data":"  #784: fish — lum 0.204 contrast 0.097 sat 0.381\n"}
+,{"stream_name":"stdout","time":19.6574216,"data":"  #725: fish — lum 0.238 contrast 0.118 sat 0.384\n"}
+,{"stream_name":"stdout","time":19.657527539,"data":"  #1039: jellyfish — lum 0.290 contrast 0.078 sat 0.422\n"}
+,{"stream_name":"stdout","time":19.657788282,"data":"  #1075: octopus — lum 0.347 contrast 0.110 sat 0.353\n"}
+,{"stream_name":"stdout","time":19.671637793,"data":"\n"}
+,{"stream_name":"stdout","time":19.671674573,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.671685645,"data":"MANIFEST\n"}
+,{"stream_name":"stdout","time":19.671690406,"data":"====================================================================\n"}
+,{"stream_name":"stdout","time":19.671695588,"data":"{\n"}
+,{"stream_name":"stdout","time":19.671700148,"data":"  \"n_images\": 39,\n"}
+,{"stream_name":"stdout","time":19.671705022,"data":"  \"n_test\": 1612,\n"}
+,{"stream_name":"stdout","time":19.671709782,"data":"  \"classes_covered\": 20,\n"}
+,{"stream_name":"stdout","time":19.671714222,"data":"  \"per_stratum\": {\n"}
+,{"stream_name":"stdout","time":19.671717306,"data":"    \"class_coverage\": 20,\n"}
+,{"stream_name":"stdout","time":19.671720446,"data":"    \"paper_pair\": 8,\n"}
+,{"stream_name":"stdout","time":19.671723423,"data":"    \"rare_class\": 4,\n"}
+,{"stream_name":"stdout","time":19.671726352,"data":"    \"challenging\": 4,\n"}
+,{"stream_name":"stdout","time":19.671729328,"data":"    \"fish_group\": 3\n"}
+,{"stream_name":"stdout","time":19.671732186,"data":"  },\n"}
+,{"stream_name":"stdout","time":19.671735018,"data":"  \"n_v2_wrong\": 14,\n"}
+,{"stream_name":"stdout","time":19.67173835,"data":"  \"n_v4_wrong\": 8,\n"}
+,{"stream_name":"stdout","time":19.671742973,"data":"  \"sources\": {\n"}
+,{"stream_name":"stdout","time":19.671747627,"data":"    \"v2\": \"aqua20-v2-full-resnet50\",\n"}
+,{"stream_name":"stdout","time":19.67175216,"data":"    \"v4\": \"aqua20-v4-full-convnext-base\"\n"}
+,{"stream_name":"stdout","time":19.671756737,"data":"  },\n"}
+,{"stream_name":"stdout","time":19.671760966,"data":"  \"targets\": {\n"}
+,{"stream_name":"stdout","time":19.671765392,"data":"    \"class_coverage\": 20,\n"}
+,{"stream_name":"stdout","time":19.671780927,"data":"    \"paper_pair\": 8,\n"}
+,{"stream_name":"stdout","time":19.671784993,"data":"    \"fish_group\": 3,\n"}
+,{"stream_name":"stdout","time":19.671788796,"data":"    \"rare_class\": 4,\n"}
+,{"stream_name":"stdout","time":19.671792898,"data":"    \"challenging\": 4\n"}
+,{"stream_name":"stdout","time":19.671797276,"data":"  }\n"}
+,{"stream_name":"stdout","time":19.671801453,"data":"}\n"}
+,{"stream_name":"stdout","time":19.671805469,"data":"\n"}
+,{"stream_name":"stdout","time":19.679975887,"data":" test_index          class        stratum        v2_pred        v4_pred\n"}
+,{"stream_name":"stdout","time":19.680012487,"data":"          3          coral     paper_pair     seaAnemone     seaAnemone\n"}
+,{"stream_name":"stdout","time":19.680017647,"data":"        319          coral class_coverage          coral          coral\n"}
+,{"stream_name":"stdout","time":19.680022592,"data":"        341          coral     paper_pair       starfish       starfish\n"}
+,{"stream_name":"stdout","time":19.680027242,"data":"        350           crab     rare_class         turtle           crab\n"}
+,{"stream_name":"stdout","time":19.680032065,"data":"        354           crab class_coverage           crab           crab\n"}
+,{"stream_name":"stdout","time":19.680036828,"data":"        360          diver class_coverage          diver          diver\n"}
+,{"stream_name":"stdout","time":19.680041458,"data":"        386            eel class_coverage            eel            eel\n"}
+,{"stream_name":"stdout","time":19.680046423,"data":"        581           fish     fish_group   fishInGroups   fishInGroups\n"}
+,{"stream_name":"stdout","time":19.680050816,"data":"        593           fish     fish_group   fishInGroups   fishInGroups\n"}
+,{"stream_name":"stdout","time":19.680055386,"data":"        713           fish class_coverage           fish           fish\n"}
+,{"stream_name":"stdout","time":19.680060164,"data":"        718           fish     fish_group   fishInGroups   fishInGroups\n"}
+,{"stream_name":"stdout","time":19.68006506,"data":"        725           fish    challenging           fish           fish\n"}
+,{"stream_name":"stdout","time":19.680070093,"data":"        784           fish    challenging           fish           fish\n"}
+,{"stream_name":"stdout","time":19.680074683,"data":"        944           fish     paper_pair            eel            eel\n"}
+,{"stream_name":"stdout","time":19.68007942,"data":"       1008   fishInGroups class_coverage   fishInGroups   fishInGroups\n"}
+,{"stream_name":"stdout","time":19.680083993,"data":"       1025       flatworm class_coverage       flatworm       flatworm\n"}
+,{"stream_name":"stdout","time":19.6800887,"data":"       1031       flatworm     paper_pair        seaSlug       flatworm\n"}
+,{"stream_name":"stdout","time":19.680094198,"data":"       1037      jellyfish class_coverage      jellyfish      jellyfish\n"}
+,{"stream_name":"stdout","time":19.680097805,"data":"       1039      jellyfish    challenging      jellyfish      jellyfish\n"}
+,{"stream_name":"stdout","time":19.680100806,"data":"       1067 marine_dolphin     paper_pair          shark marine_dolphin\n"}
+,{"stream_name":"stdout","time":19.680103765,"data":"       1069 marine_dolphin class_coverage marine_dolphin marine_dolphin\n"}
+,{"stream_name":"stdout","time":19.68010672,"data":"       1070 marine_dolphin     rare_class        rayfish marine_dolphin\n"}
+,{"stream_name":"stdout","time":19.68010975,"data":"       1075        octopus    challenging        octopus        octopus\n"}
+,{"stream_name":"stdout","time":19.680114541000002,"data":"       1076        octopus     rare_class           fish        octopus\n"}
+,{"stream_name":"stdout","time":19.680131056,"data":"       1077        octopus class_coverage        octopus        octopus\n"}
+,{"stream_name":"stdout","time":19.680136085,"data":"       1157        rayfish class_coverage        rayfish        rayfish\n"}
+,{"stream_name":"stdout","time":19.680140794,"data":"       1211     seaAnemone class_coverage     seaAnemone     seaAnemone\n"}
+,{"stream_name":"stdout","time":19.68014616,"data":"       1377     seaAnemone     paper_pair          coral          coral\n"}
+,{"stream_name":"stdout","time":19.680150695000002,"data":"       1399    seaCucumber class_coverage    seaCucumber    seaCucumber\n"}
+,{"stream_name":"stdout","time":19.680155021,"data":"       1412        seaSlug class_coverage        seaSlug        seaSlug\n"}
+,{"stream_name":"stdout","time":19.680159539,"data":"       1425        seaSlug     paper_pair        seaSlug       flatworm\n"}
+,{"stream_name":"stdout","time":19.680164262,"data":"       1451      seaUrchin class_coverage      seaUrchin      seaUrchin\n"}
+,{"stream_name":"stdout","time":19.68016908,"data":"       1458          shark class_coverage          shark          shark\n"}
+,{"stream_name":"stdout","time":19.680173729,"data":"       1468          shark     paper_pair marine_dolphin          shark\n"}
+,{"stream_name":"stdout","time":19.680178374,"data":"       1478         shrimp     rare_class           crab         shrimp\n"}
+,{"stream_name":"stdout","time":19.680182863,"data":"       1484         shrimp class_coverage         shrimp         shrimp\n"}
+,{"stream_name":"stdout","time":19.680187395,"data":"       1489          squid class_coverage          squid          squid\n"}
+,{"stream_name":"stdout","time":19.680192267,"data":"       1515       starfish class_coverage       starfish       starfish\n"}
+,{"stream_name":"stdout","time":19.68019574,"data":"       1565         turtle class_coverage         turtle         turtle\n"}
+,{"stream_name":"stdout","time":19.680198836,"data":"\n"}
+,{"stream_name":"stdout","time":19.680201787,"data":"All 20 classes present.\n"}
+,{"stream_name":"stdout","time":19.68020598,"data":"\n"}
+,{"stream_name":"stdout","time":19.680210413,"data":"Wrote xai_manifest.csv (39 rows) + manifest_stats.json\n"}
+,{"stream_name":"stderr","time":22.68691509,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":22.686952594,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":22.977131493,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":22.977171721,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":23.755583032,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":25.360509238,"data":"[NbConvertApp] Writing 338862 bytes to __results__.html\n"}
+]
