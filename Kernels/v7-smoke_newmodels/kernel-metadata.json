@@ -1,0 +1,17 @@
+{
+  "id": "farhantahsinkhan/aqua20-v7-smoke-newmodels",
+  "title": "aqua20-v7-smoke-newmodels",
+  "code_file": "smoke_newmodels.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

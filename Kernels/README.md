@@ -38,14 +38,23 @@ Kaggle slugs cannot contain underscores, so the folder's `_` becomes `-` in the 
 
 ## Run log
 
-| Run | Model | Sampler | Epochs | Kaggle slug | Status | Top-1 | Macro F1 | Grad-CAM |
+| Run | Model | Sampler | Epochs | Kaggle slug | Status | Top-1 | Macro F1 | Notes |
 |---|---|---|---|---|---|---|---|---|
-| v1-smoke_resnet50 | resnet50 | on | 1 + 1 | `aqua20-resnet50-smoke` | ✅ COMPLETE | n/a (smoke) | n/a | ✅ works |
-| v2-full_resnet50 | resnet50 | on | 25 + 75 | `aqua20-v2-full-resnet50` | ✅ COMPLETE | **85.61%** | **0.7588** | ✅ 40 imgs |
-| v3-smoke_convnext_base | convnext_base | on | 1 + 1 | `aqua20-v3-smoke-convnext-base` | ✅ COMPLETE | 80.89% (smoke) | 0.7679 (smoke) | ✅ 40 imgs |
-| **v4-full_convnext_base** | convnext_base | on | 25 + 75 | `aqua20-v4-full-convnext-base` | ✅ COMPLETE | **90.63%** | **0.8748** | ✅ 40 imgs |
+| v1-smoke_resnet50 | resnet50 | on | 1 + 1 | `aqua20-resnet50-smoke` | ✅ COMPLETE | n/a (smoke) | n/a | pipeline check |
+| v2-full_resnet50 | resnet50 | on | 25 + 75 | `aqua20-v2-full-resnet50` | ✅ COMPLETE | **85.61%** | **0.7588** | 40 Grad-CAM imgs |
+| v3-smoke_convnext_base | convnext_base | on | 1 + 1 | `aqua20-v3-smoke-convnext-base` | ✅ COMPLETE | 80.89% (smoke) | 0.7679 (smoke) | smoke only, do not quote |
+| **v4-full_convnext_base** | convnext_base | on | 25 + 75 | `aqua20-v4-full-convnext-base` | ✅ COMPLETE | **90.63%** | **0.8748** | current best; reproduces paper |
 | v5-manifest | — (CPU) | — | — | `aqua20-v5-manifest` | ✅ COMPLETE | — | — | frozen 39-image XAI manifest |
 | v6-smoke_xai_resnet50 | resnet50 | — | — | `aqua20-v6-smoke-xai-resnet50` | ✅ COMPLETE | — | — | GradCAM+LIME+SHAP harness proven |
+| v7-smoke_newmodels | swin+inc+vgg | — | smoke | `aqua20-v7-smoke-newmodels` | ✅ COMPLETE | — | — | all 3 archs smoke passed |
+| **v8-full_swin** | swin | on | 25 + 75 | `aqua20-v8-full-swin` | ✅ COMPLETE | **89.83%** | **0.8631** | beats paper's 88.65% by +1.18 pp |
+| **v9-full_inceptionv3** | inceptionv3 | on | 25 + 75 | `aqua20-v9-full-inceptionv3` | ✅ COMPLETE | **83.68%** | **0.7863** | beats paper's 76.36% by +7.32 pp |
+| **v10-full_vgg19** | vgg19 | on | 25 + 75 | `aqua20-v10-full-vgg19` | ✅ COMPLETE | **66.07%** | **0.5352** | paper: 77.98%; 140M params overfits |
+| v11-xai_resnet50 | resnet50 | — | XAI | `aqua20-v11-xai-resnet50` | ⏳ queued | — | — | 39 images × 3 XAI methods |
+| v12-xai_convnext_base | convnext_base | — | XAI | `aqua20-v12-xai-convnext-base` | ⏳ queued | — | — | 39 images × 3 XAI methods |
+| v13-xai_swin | swin | — | XAI | `aqua20-v13-xai-swin` | ⏳ queued | — | — | 39 images × 3 XAI methods |
+| v14-xai_inceptionv3 | inceptionv3 | — | XAI | `aqua20-v14-xai-inceptionv3` | ⏳ queued | — | — | 39 images × 3 XAI methods |
+| v15-xai_vgg19 | vgg19 | — | XAI | `aqua20-v15-xai-vgg19` | ⏳ queued | — | — | 39 images × 3 XAI methods |
 
 ### The XAI track (directions #2 and #3)
 

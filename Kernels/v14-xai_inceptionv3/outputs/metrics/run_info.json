@@ -1,0 +1,11 @@
+{
+  "model": "inceptionv3",
+  "smoke": false,
+  "n_images": 39,
+  "checkpoint": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v9-full-inceptionv3/weights_inceptionv3.pth",
+  "manifest": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v5-manifest/xai_manifest.csv",
+  "lime_samples": 1000,
+  "shap_nsamples": 200,
+  "runtime_min": 7.06,
+  "sanity_check_passed": true
+}

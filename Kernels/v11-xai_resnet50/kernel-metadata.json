@@ -1,0 +1,20 @@
+{
+  "id": "farhantahsinkhan/aqua20-v11-xai-resnet50",
+  "title": "aqua20-v11-xai-resnet50",
+  "code_file": "xai.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "farhantahsinkhan/aqua20-v2-full-resnet50",
+    "farhantahsinkhan/aqua20-v5-manifest"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

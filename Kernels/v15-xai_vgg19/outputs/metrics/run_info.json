@@ -1,0 +1,11 @@
+{
+  "model": "vgg19",
+  "smoke": false,
+  "n_images": 39,
+  "checkpoint": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v10-full-vgg19/weights_vgg19.pth",
+  "manifest": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v5-manifest/xai_manifest.csv",
+  "lime_samples": 1000,
+  "shap_nsamples": 200,
+  "runtime_min": 14.35,
+  "sanity_check_passed": false
+}

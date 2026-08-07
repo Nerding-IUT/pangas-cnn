@@ -1,0 +1,20 @@
+{
+  "id": "farhantahsinkhan/aqua20-v12-xai-convnext-base",
+  "title": "aqua20-v12-xai-convnext-base",
+  "code_file": "xai.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "farhantahsinkhan/aqua20-v4-full-convnext-base",
+    "farhantahsinkhan/aqua20-v5-manifest"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

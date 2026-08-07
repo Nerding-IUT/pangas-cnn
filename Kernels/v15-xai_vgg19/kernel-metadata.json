@@ -1,0 +1,20 @@
+{
+  "id": "farhantahsinkhan/aqua20-v15-xai-vgg19",
+  "title": "aqua20-v15-xai-vgg19",
+  "code_file": "xai.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "farhantahsinkhan/aqua20-v10-full-vgg19",
+    "farhantahsinkhan/aqua20-v5-manifest"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

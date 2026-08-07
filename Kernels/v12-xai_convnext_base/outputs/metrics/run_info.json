@@ -1,0 +1,11 @@
+{
+  "model": "convnext_base",
+  "smoke": false,
+  "n_images": 39,
+  "checkpoint": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v4-full-convnext-base/weights_convnext_base.pth",
+  "manifest": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v5-manifest/xai_manifest.csv",
+  "lime_samples": 1000,
+  "shap_nsamples": 200,
+  "runtime_min": 18.36,
+  "sanity_check_passed": true
+}

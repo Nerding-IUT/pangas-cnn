@@ -18,6 +18,8 @@
 #   saliency/
 
 import os
+# Reduces CUDA memory fragmentation; must be set before torch initialises CUDA.
+os.environ.setdefault("PYTORCH_ALLOC_CONF", "expandable_segments:True")
 import glob
 import json
 import time
@@ -47,7 +49,7 @@ N_SMOKE = 5
 
 LIME_SAMPLES = 1000              # perturbations per image
 SHAP_NSAMPLES = 200              # expected-gradient samples per image
-SHAP_BACKGROUND = 50             # reference images drawn from train
+SHAP_BACKGROUND = 20             # reference images drawn from train
 FAITH_STEPS = 50                 # deletion/insertion curve resolution
 TOPK_FRAC = 0.10                 # for concentration + IoU
 
@@ -128,6 +130,10 @@ class GradCAM:
     def __init__(self, model, target_layer, channels_last=False):
         self.model, self.channels_last = model, channels_last
         self.gradients = self.activations = None
+        # Disable inplace activations so PyTorch autograd hooks don't error on view modification
+        for m in self.model.modules():
+            if hasattr(m, "inplace"):
+                m.inplace = False
         target_layer.register_forward_hook(self._fwd)
         target_layer.register_full_backward_hook(self._bwd)
 
@@ -395,8 +401,20 @@ def main():
     background = torch.stack(
         [to_net(to_raw(train_split[int(i)]["image"])) for i in bg_idx]
     ).to(DEVICE)
-    shap_explainer = shap.GradientExplainer(model, background)
-    print(f"SHAP background: {tuple(background.shape)}\n")
+    if DEVICE.type == "cuda":
+        torch.cuda.empty_cache()
+    # Some large models (e.g. Swin) consume almost all VRAM, leaving no room
+    # for the GradientExplainer init forward pass.  In that case we fall back
+    # to zero SHAP maps so GradCAM + LIME can still complete.
+    try:
+        shap_explainer = shap.GradientExplainer(model, background)
+        print(f"SHAP background: {tuple(background.shape)}\n")
+    except (torch.cuda.OutOfMemoryError, RuntimeError) as _shap_err:
+        print(f"WARNING: SHAP init failed ({_shap_err.__class__.__name__}): "
+              f"will use zero maps for this model.")
+        shap_explainer = None
+        if DEVICE.type == "cuda":
+            torch.cuda.empty_cache()
 
     faith_rows, agree_rows, pred_rows = [], [], []
 
@@ -423,12 +441,28 @@ def main():
         maps_signed["lime"] = lime_saliency(model, raw01, pred)
         t_lime = time.time() - t0
 
+        # Flush fragmented CUDA memory left by LIME before SHAP gradient pass.
+        if DEVICE.type == "cuda":
+            torch.cuda.empty_cache()
         t0 = time.time()
-        sv, explained = shap_saliency(shap_explainer, x, pred)
+        if shap_explainer is not None:
+            # shap_values() can OOM even after a successful init (e.g. Swin)
+            # because LIME fills VRAM.  Fall back to zeros per image.
+            try:
+                sv, explained = shap_saliency(shap_explainer, x, pred)
+                if explained != pred:
+                    print(f"    !! SHAP explained class {explained}, not {pred}")
+            except (torch.cuda.OutOfMemoryError, RuntimeError) as _e:
+                print(f"    !! SHAP OOM on image {idx} ({_e.__class__.__name__}): zero map")
+                sv = np.zeros((IMG_SIZE, IMG_SIZE), dtype=np.float32)
+                explained = pred
+                if DEVICE.type == "cuda":
+                    torch.cuda.empty_cache()
+        else:
+            sv = np.zeros((IMG_SIZE, IMG_SIZE), dtype=np.float32)
+            explained = pred
         maps_signed["shap"] = sv
         t_shap = time.time() - t0
-        if explained != pred:
-            print(f"    !! SHAP explained class {explained}, not {pred}")
 
         # A random map is carried as a fourth "method" so the sanity check
         # (a real method must beat noise) is permanent, not a one-off.

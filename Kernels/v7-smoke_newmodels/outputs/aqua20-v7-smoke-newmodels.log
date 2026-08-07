@@ -1,0 +1,60 @@
+[{"stream_name":"stdout","time":18.802981689,"data":"Device: cuda\n"}
+,{"stream_name":"stdout","time":18.849285394,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":20.105666251,"data":"Downloading: \"https://download.pytorch.org/models/vgg19-dcbb9e9d.pth\" to /root/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth\n"}
+,{"stream_name":"stderr","time":23.31628366,"data":"\r  0%|          | 0.00/548M [00:00\u003c?, ?B/s]\r  1%|▏         | 7.50M/548M [00:00\u003c00:07, 77.3MB/s]\r  3%|▎         | 15.9M/548M [00:00\u003c00:06, 82.9MB/s]\r  6%|▌         | 32.8M/548M [00:00\u003c00:04, 125MB/s] \r  9%|▉         | 49.8M/548M [00:00\u003c00:03, 146MB/s]\r 12%|█▏        | 67.0M/548M [00:00\u003c00:03, 158MB/s]\r 15%|█▌        | 84.9M/548M [00:00\u003c00:02, 168MB/s]\r 19%|█▉        | 103M/548M [00:00\u003c00:02, 176MB/s] \r 22%|██▏       | 121M/548M [00:00\u003c00:02, 180MB/s]\r 26%|██▌       | 140M/548M [00:00\u003c00:02, 184MB/s]\r 29%|██▉       | 158M/548M [00:01\u003c00:02, 187MB/s]\r 32%|███▏      | 177M/548M [00:01\u003c00:02, 190MB/s]\r 36%|███▌      | 196M/548M [00:01\u003c00:01, 191MB/s]\r 39%|███▉      | 214M/548M [00:01\u003c00:01, 192MB/s]\r 43%|████▎     | 233M/548M [00:01\u003c00:01, 194MB/s]\r 46%|████▌     | 252M/548M [00:01\u003c00:01, 193MB/s]\r 49%|████▉     | 270M/548M [00:01\u003c00:01, 189MB/s]\r 53%|█████▎    | 289M/548M [00:01\u003c00:01, 191MB/s]\r 56%|█████▌    | 307M/548M [00:01\u003c00:01, 181MB/s]\r 59%|█████▉    | 325M/548M [00:01\u003c00:01, 183MB/s]\r 63%|██████▎   | 344M/548M [00:02\u003c00:01, 188MB/s]\r 66%|██████▋   | 363M/548M [00:02\u003c00:01, 191MB/s]\r 70%|██████▉   | 382M/548M [00:02\u003c00:00, 194MB/s]\r 73%|███████▎  | 402M/548M [00:02\u003c00:00, 196MB/s]\r 77%|███████▋  | 420M/548M [00:02\u003c00:00, 195MB/s]\r 80%|████████  | 439M/548M [00:02\u003c00:00, 192MB/s]\r 84%|████████▎ | 458M/548M [00:02\u003c00:00, 188MB/s]\r 87%|████████▋ | 476M/548M [00:02\u003c00:00, 190MB/s]\r 90%|█████████ | 496M/548M [00:02\u003c00:00, 193MB/s]\r 94%|█████████▍| 515M/548M [00:02\u003c00:00, 196MB/s]\r 97%|█████████▋| 534M/548M [00:03\u003c00:00, 197MB/s]\r100%|██████████| 548M/548M [00:03\u003c00:00, 184MB/s]\n"}
+,{"stream_name":"stdout","time":23.878078565,"data":"\n"}
+,{"stream_name":"stdout","time":23.878123841,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":23.878129645,"data":"  vgg19\n"}
+,{"stream_name":"stdout","time":23.878133568,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":24.302696143,"data":"  Params: 139,652,180\n"}
+,{"stream_name":"stdout","time":25.110165545,"data":"  Forward pass: OK  output shape torch.Size([2, 20])\n"}
+,{"stream_name":"stdout","time":25.403486469,"data":"  Backward pass: OK  loss=16.2432\n"}
+,{"stream_name":"stdout","time":25.403521272,"data":"  CAM target layer: ReLU  (channels_last=False)\n"}
+,{"stream_name":"stdout","time":25.596890577,"data":"  CAM shape: 224x224  range=[0.0019, 1.0000]\n"}
+,{"stream_name":"stdout","time":25.596939546,"data":"  CAM non-degenerate: OK\n"}
+,{"stream_name":"stdout","time":25.596951461,"data":"  VGG19 target is ReLU (not MaxPool): OK\n"}
+,{"stream_name":"stdout","time":25.596959936,"data":"  [vgg19] ALL CHECKS PASSED\n"}
+,{"stream_name":"stdout","time":25.831695721,"data":"Downloading: \"https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth\" to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth\n"}
+,{"stream_name":"stderr","time":26.492824433,"data":"\r  0%|          | 0.00/104M [00:00\u003c?, ?B/s]\r 13%|█▎        | 13.4M/104M [00:00\u003c00:00, 140MB/s]\r 30%|██▉       | 30.9M/104M [00:00\u003c00:00, 165MB/s]\r 47%|████▋     | 48.4M/104M [00:00\u003c00:00, 173MB/s]\r 63%|██████▎   | 65.8M/104M [00:00\u003c00:00, 176MB/s]\r 80%|███████▉  | 82.6M/104M [00:00\u003c00:00, 176MB/s]\r 96%|█████████▌| 99.8M/104M [00:00\u003c00:00, 177MB/s]\r100%|██████████| 104M/104M [00:00\u003c00:00, 174MB/s] \n"}
+,{"stream_name":"stdout","time":26.611850089,"data":"\n"}
+,{"stream_name":"stdout","time":26.611883171,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":26.611887097,"data":"  inceptionv3\n"}
+,{"stream_name":"stdout","time":26.611890209,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":26.655746512,"data":"  Params: 21,826,548\n"}
+,{"stream_name":"stdout","time":26.881134423,"data":"  Forward pass: OK  output shape torch.Size([2, 20])\n"}
+,{"stream_name":"stdout","time":27.037125419,"data":"  Backward pass: OK  loss=15.8039\n"}
+,{"stream_name":"stdout","time":27.037159434,"data":"  CAM target layer: InceptionE  (channels_last=False)\n"}
+,{"stream_name":"stdout","time":27.199678493,"data":"  CAM shape: 224x224  range=[0.0000, 0.9978]\n"}
+,{"stream_name":"stdout","time":27.199744701,"data":"  CAM non-degenerate: OK\n"}
+,{"stream_name":"stdout","time":27.199751238,"data":"  InceptionV3 aux_logits=False: OK\n"}
+,{"stream_name":"stdout","time":27.199755995,"data":"  [inceptionv3] ALL CHECKS PASSED\n"}
+,{"stream_name":"stdout","time":28.747927137,"data":"Downloading: \"https://download.pytorch.org/models/swin_v2_b-781e5279.pth\" to /root/.cache/torch/hub/checkpoints/swin_v2_b-781e5279.pth\n"}
+,{"stream_name":"stderr","time":30.799430997,"data":"\r  0%|          | 0.00/336M [00:00\u003c?, ?B/s]\r  1%|          | 2.75M/336M [00:00\u003c00:18, 18.8MB/s]\r  3%|▎         | 9.75M/336M [00:00\u003c00:07, 44.9MB/s]\r  9%|▊         | 29.2M/336M [00:00\u003c00:02, 110MB/s] \r 14%|█▍        | 48.8M/336M [00:00\u003c00:02, 144MB/s]\r 20%|██        | 67.4M/336M [00:00\u003c00:01, 162MB/s]\r 26%|██▌       | 86.6M/336M [00:00\u003c00:01, 175MB/s]\r 31%|███▏      | 106M/336M [00:00\u003c00:01, 183MB/s] \r 37%|███▋      | 125M/336M [00:00\u003c00:01, 190MB/s]\r 43%|████▎     | 144M/336M [00:00\u003c00:01, 191MB/s]\r 49%|████▊     | 164M/336M [00:01\u003c00:00, 195MB/s]\r 54%|█████▍    | 183M/336M [00:01\u003c00:00, 197MB/s]\r 60%|█████▉    | 202M/336M [00:01\u003c00:00, 197MB/s]\r 66%|██████▌   | 220M/336M [00:01\u003c00:00, 197MB/s]\r 71%|███████   | 239M/336M [00:01\u003c00:00, 195MB/s]\r 77%|███████▋  | 258M/336M [00:01\u003c00:00, 196MB/s]\r 82%|████████▏ | 277M/336M [00:01\u003c00:00, 194MB/s]\r 88%|████████▊ | 296M/336M [00:01\u003c00:00, 190MB/s]\r 93%|█████████▎| 314M/336M [00:01\u003c00:00, 186MB/s]\r 99%|█████████▊| 332M/336M [00:01\u003c00:00, 184MB/s]\r100%|██████████| 336M/336M [00:02\u003c00:00, 176MB/s]\n"}
+,{"stream_name":"stdout","time":31.187988663,"data":"\n"}
+,{"stream_name":"stdout","time":31.18802417,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":31.188028801,"data":"  swin\n"}
+,{"stream_name":"stdout","time":31.18803229,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":31.310872517,"data":"  Params: 86,926,348\n"}
+,{"stream_name":"stdout","time":31.56956179,"data":"  Forward pass: OK  output shape torch.Size([2, 20])\n"}
+,{"stream_name":"stdout","time":31.923907002,"data":"  Backward pass: OK  loss=2.7581\n"}
+,{"stream_name":"stdout","time":31.923928001,"data":"  CAM target layer: Sequential  (channels_last=True)\n"}
+,{"stream_name":"stdout","time":32.05406554,"data":"  CAM shape: 224x224  range=[0.0000, 0.9881]\n"}
+,{"stream_name":"stdout","time":32.054105128,"data":"  CAM non-degenerate: OK\n"}
+,{"stream_name":"stdout","time":32.054111035,"data":"  Swin channels_last path: OK\n"}
+,{"stream_name":"stdout","time":32.05411552,"data":"  [swin] ALL CHECKS PASSED\n"}
+,{"stream_name":"stdout","time":32.058050161,"data":"\n"}
+,{"stream_name":"stdout","time":32.05806549,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":32.05806871,"data":"SMOKE SUMMARY\n"}
+,{"stream_name":"stdout","time":32.058071208,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":32.058074248,"data":"  vgg19           params= 139,652,180  CAM=224x224  status=OK\n"}
+,{"stream_name":"stdout","time":32.05809333,"data":"  inceptionv3     params=  21,826,548  CAM=224x224  status=OK\n"}
+,{"stream_name":"stdout","time":32.058097604,"data":"  swin            params=  86,926,348  CAM=224x224  status=OK\n"}
+,{"stream_name":"stdout","time":32.05810188,"data":"\n"}
+,{"stream_name":"stdout","time":32.058105703,"data":"ALL MODELS PASSED — safe to push v8/v9/v10 full training runs\n"}
+,{"stream_name":"stderr","time":36.748478171,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":36.748509324,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":37.02616081,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":37.026191411,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":37.652244963,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":38.952773892,"data":"[NbConvertApp] Writing 314696 bytes to __results__.html\n"}
+]
