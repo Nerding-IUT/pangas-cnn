@@ -1,0 +1,2 @@
+augmentation,top1_accuracy,top3_accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,n_errors,epochs_stage2_run,stopped_early
+cosine_anneal,0.8548,0.9702,0.7994,0.7751,0.7676,0.854,234,75,False

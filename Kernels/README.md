@@ -50,11 +50,17 @@ Kaggle slugs cannot contain underscores, so the folder's `_` becomes `-` in the 
 | **v8-full_swin** | swin | on | 25 + 75 | `aqua20-v8-full-swin` | ✅ COMPLETE | **89.83%** | **0.8631** | beats paper's 88.65% by +1.18 pp |
 | **v9-full_inceptionv3** | inceptionv3 | on | 25 + 75 | `aqua20-v9-full-inceptionv3` | ✅ COMPLETE | **83.68%** | **0.7863** | beats paper's 76.36% by +7.32 pp |
 | **v10-full_vgg19** | vgg19 | on | 25 + 75 | `aqua20-v10-full-vgg19` | ✅ COMPLETE | **66.07%** | **0.5352** | paper: 77.98%; 140M params overfits |
-| v11-xai_resnet50 | resnet50 | — | XAI | `aqua20-v11-xai-resnet50` | ⏳ queued | — | — | 39 images × 3 XAI methods |
-| v12-xai_convnext_base | convnext_base | — | XAI | `aqua20-v12-xai-convnext-base` | ⏳ queued | — | — | 39 images × 3 XAI methods |
-| v13-xai_swin | swin | — | XAI | `aqua20-v13-xai-swin` | ⏳ queued | — | — | 39 images × 3 XAI methods |
-| v14-xai_inceptionv3 | inceptionv3 | — | XAI | `aqua20-v14-xai-inceptionv3` | ⏳ queued | — | — | 39 images × 3 XAI methods |
-| v15-xai_vgg19 | vgg19 | — | XAI | `aqua20-v15-xai-vgg19` | ⏳ queued | — | — | 39 images × 3 XAI methods |
+| v11-xai_resnet50 | resnet50 | — | XAI | `aqua20-v11-xai-resnet50` | ✅ COMPLETE | — | — | 39 images × 3 XAI methods |
+| v12-xai_convnext_base | convnext_base | — | XAI | `aqua20-v12-xai-convnext-base` | ✅ COMPLETE | — | — | 39 images × 3 XAI methods |
+| v13-xai_swin | swin | — | XAI | `aqua20-v13-xai-swin` | ✅ COMPLETE | — | — | 39 images × 3 XAI methods; SHAP OOM → zero fallback |
+| v14-xai_inceptionv3 | inceptionv3 | — | XAI | `aqua20-v14-xai-inceptionv3` | ✅ COMPLETE | — | — | 39 images × 3 XAI methods |
+| v15-xai_vgg19 | vgg19 | — | XAI | `aqua20-v15-xai-vgg19` | ✅ COMPLETE | — | — | 39 images × 3 XAI methods |
+| v16-resnet50_label_smooth | resnet50 | on | 25 + 75 | `aqua20-v16-resnet50-label-smooth` | ✅ COMPLETE | 85.36% | 0.7631 | label_smoothing=0.1; neutral vs baseline |
+| v17-tta_resnet50 | resnet50 | — | eval | `aqua20-v17-tta-resnet50` | ✅ COMPLETE | **86.72%** | **0.7722** | 8-view TTA on v2 weights; +1.11 pp Top-1 |
+| v18-resnet50_cosine_annealing | resnet50 | on | 25 + 75 | `aqua20-v18-resnet50-cosine-anneal` | ✅ COMPLETE | 85.48% | 0.7676 | CosineAnnealingLR; +0.88 pp F1 |
+| **v19-tta_cosine_resnet50** | resnet50 | — | eval | `aqua20-v19-tta-cosine-resnet50` | ✅ COMPLETE | **87.03%** | **0.7908** | 8-view TTA on v18 weights; **best ResNet-50 result** |
+
+
 
 ### The XAI track (directions #2 and #3)
 

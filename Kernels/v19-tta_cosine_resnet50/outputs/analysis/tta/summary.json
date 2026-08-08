@@ -1,0 +1,16 @@
+{
+  "tag": "TTA (8 views)",
+  "top1": 0.8703,
+  "top3": 0.9746,
+  "macro_p": 0.8304,
+  "macro_r": 0.8061,
+  "macro_f1": 0.7908,
+  "weighted_f1": 0.8688,
+  "n_errors": 209,
+  "mean_conf_correct": 0.9371,
+  "mean_conf_wrong": 0.7274,
+  "n_tta_views": 8,
+  "ckpt": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v18-resnet50-cosine-anneal/weights_resnet50_cosine_anneal.pth",
+  "delta_top1_pp": 1.55,
+  "delta_macro_f1": 0.0232
+}

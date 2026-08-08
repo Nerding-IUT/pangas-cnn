@@ -1,0 +1,16 @@
+{
+  "tag": "TTA (8 views)",
+  "top1": 0.8672,
+  "top3": 0.9777,
+  "macro_p": 0.8121,
+  "macro_r": 0.7759,
+  "macro_f1": 0.7722,
+  "weighted_f1": 0.8656,
+  "n_errors": 214,
+  "mean_conf_correct": 0.94,
+  "mean_conf_wrong": 0.7234,
+  "n_tta_views": 8,
+  "ckpt": "/kaggle/input/notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/weights_resnet50.pth",
+  "delta_top1_pp": 1.11,
+  "delta_macro_f1": 0.0134
+}

@@ -1,0 +1,2 @@
+augmentation,top1_accuracy,top3_accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,n_errors,epochs_stage2_run,stopped_early
+label_smooth,0.8536,0.9653,0.7795,0.7771,0.7631,0.8549,236,75,False

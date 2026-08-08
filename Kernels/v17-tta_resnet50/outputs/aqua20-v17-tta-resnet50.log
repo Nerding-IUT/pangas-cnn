@@ -1,0 +1,72 @@
+[{"stream_name":"stderr","time":7.816930459,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.817024668,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.817031318,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.817054487,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.501121513,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.501161369,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.50116772,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.501172921,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":27.143284579,"data":"Device: cuda\n"}
+,{"stream_name":"stdout","time":27.143390279,"data":"Loading checkpoint: /kaggle/input/notebooks/farhantahsinkhan/aqua20-v2-full-resnet50/weights_resnet50.pth\n"}
+,{"stream_name":"stderr","time":29.253978207,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":29.254042231,"data":"\n"}
+,{"stream_name":"stderr","time":29.254050617,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":29.256303579,"data":"Loaded ResNet-50: 23,549,012 params\n"}
+,{"stream_name":"stdout","time":34.865915312,"data":"Test set: 1612 samples | 20 classes\n"}
+,{"stream_name":"stdout","time":34.865971271,"data":"\n"}
+,{"stream_name":"stdout","time":34.86597956,"data":"Running TTA with 8 views per image...\n"}
+,{"stream_name":"stdout","time":41.543455374,"data":"  View 1/8 done (6.7s)\n"}
+,{"stream_name":"stdout","time":47.009545458,"data":"  View 2/8 done (12.1s)\n"}
+,{"stream_name":"stdout","time":52.756730234,"data":"  View 3/8 done (17.9s)\n"}
+,{"stream_name":"stdout","time":58.476642789,"data":"  View 4/8 done (23.6s)\n"}
+,{"stream_name":"stdout","time":64.056386006,"data":"  View 5/8 done (29.2s)\n"}
+,{"stream_name":"stdout","time":69.681026028,"data":"  View 6/8 done (34.8s)\n"}
+,{"stream_name":"stdout","time":75.30889334,"data":"  View 7/8 done (40.4s)\n"}
+,{"stream_name":"stdout","time":80.948106483,"data":"  View 8/8 done (46.0s)\n"}
+,{"stream_name":"stdout","time":80.948141667,"data":"\n"}
+,{"stream_name":"stdout","time":80.948148191,"data":"=== [baseline (centre-crop only)] ===\n"}
+,{"stream_name":"stdout","time":80.948153099,"data":"  Top-1: 0.8561 | Top-3: 0.9758\n"}
+,{"stream_name":"stdout","time":80.948157496,"data":"  Macro P: 0.7810 | R: 0.7667 | F1: 0.7588\n"}
+,{"stream_name":"stdout","time":80.948161942,"data":"  Weighted F1: 0.8548\n"}
+,{"stream_name":"stdout","time":80.948166707,"data":"  Errors: 232 / 1612 (14.4%)\n"}
+,{"stream_name":"stdout","time":80.948171173,"data":"  Mean conf correct: 0.9633 | wrong: 0.8277\n"}
+,{"stream_name":"stdout","time":80.948176209,"data":"\n"}
+,{"stream_name":"stdout","time":80.948181095,"data":"=== [TTA (8 views)] ===\n"}
+,{"stream_name":"stdout","time":80.948186057,"data":"  Top-1: 0.8672 | Top-3: 0.9777\n"}
+,{"stream_name":"stdout","time":80.948190663,"data":"  Macro P: 0.8121 | R: 0.7759 | F1: 0.7722\n"}
+,{"stream_name":"stdout","time":80.948211818,"data":"  Weighted F1: 0.8656\n"}
+,{"stream_name":"stdout","time":80.948215925,"data":"  Errors: 214 / 1612 (13.3%)\n"}
+,{"stream_name":"stdout","time":80.948218516,"data":"  Mean conf correct: 0.9400 | wrong: 0.7234\n"}
+,{"stream_name":"stdout","time":80.948220843,"data":"\n"}
+,{"stream_name":"stdout","time":80.948223032,"data":"=== DELTA (TTA vs baseline) ===\n"}
+,{"stream_name":"stdout","time":80.948225334,"data":"  Top-1: +1.11 pp | Macro F1: +0.0134\n"}
+,{"stream_name":"stdout","time":80.948227721,"data":"\n"}
+,{"stream_name":"stdout","time":80.948229915,"data":"Bottom-5 classes (TTA):\n"}
+,{"stream_name":"stdout","time":80.948232194,"data":"         class  support  precision  recall     f1\n"}
+,{"stream_name":"stdout","time":80.948234553,"data":"   seaCucumber       10     0.5000  0.2000 0.2857\n"}
+,{"stream_name":"stdout","time":80.94825587,"data":"marine_dolphin       10     1.0000  0.2000 0.3333\n"}
+,{"stream_name":"stdout","time":80.948260293,"data":"      flatworm       13     0.7500  0.4615 0.5714\n"}
+,{"stream_name":"stdout","time":80.948264208,"data":"       seaSlug       20     0.5556  0.7500 0.6383\n"}
+,{"stream_name":"stdout","time":80.948267968,"data":"         shark       19     0.5862  0.8947 0.7083\n"}
+,{"stream_name":"stdout","time":80.948271574,"data":"\n"}
+,{"stream_name":"stdout","time":80.94827454,"data":"Top confusion pairs (TTA):\n"}
+,{"stream_name":"stdout","time":80.948277683,"data":"      true    predicted  count  pct_of_true_class\n"}
+,{"stream_name":"stdout","time":80.948281374,"data":"      fish        coral     19               3.53\n"}
+,{"stream_name":"stdout","time":80.948285131,"data":"     coral         fish     16               4.60\n"}
+,{"stream_name":"stdout","time":80.948288305,"data":"     coral   seaAnemone     14               4.02\n"}
+,{"stream_name":"stdout","time":80.94829169,"data":"seaAnemone        coral     11               4.98\n"}
+,{"stream_name":"stdout","time":80.948294974,"data":"      fish fishInGroups     10               1.86\n"}
+,{"stream_name":"stdout","time":80.948298415,"data":"      fish   seaAnemone      9               1.67\n"}
+,{"stream_name":"stdout","time":80.948301788,"data":"     coral      rayfish      7               2.01\n"}
+,{"stream_name":"stdout","time":80.948305292,"data":"     coral          eel      6               1.72\n"}
+,{"stream_name":"stdout","time":80.948308492,"data":"\n"}
+,{"stream_name":"stdout","time":80.948311814,"data":"Done in 0.8 min. Results in analysis/tta/\n"}
+,{"stream_name":"stderr","time":86.323732132,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":86.323842515,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":86.501079168,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":86.501136568,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":87.149460642,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":87.512872449,"data":"[NbConvertApp] Writing 83971 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":90.212646754,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":91.23696407,"data":"[NbConvertApp] Writing 379891 bytes to __results__.html\n"}
+]

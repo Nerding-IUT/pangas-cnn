@@ -1,0 +1,19 @@
+{
+  "id": "farhantahsinkhan/aqua20-v19-tta-cosine-resnet50",
+  "title": "aqua20-v19-tta-cosine-resnet50",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "farhantahsinkhan/aqua20-v18-resnet50-cosine-anneal"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
